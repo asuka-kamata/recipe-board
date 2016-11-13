@@ -1,0 +1,11 @@
+<%= form_for(@food) do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <div class="field">
+        <%= f.text_field :content, placeholder: "食材名" %>
+    </div>
+    
+    <%= f.submit "登録", class: "btn btn-primary" %>
+    
+<% end %>

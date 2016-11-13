@@ -105,3 +105,64 @@ input {
   }
 }
 
+
+/* sidebar */
+
+aside {
+  section.user_info {
+    margin-top: 20px;
+  }
+  section {
+    padding: 10px 0;
+    margin-top: 20px;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+
+
+
+// .center.jumbotron {
+//   height: 200px;
+//   position: relative;
+// }
+
+// .center.jumbotron .bg-fake {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 200px;
+//   background-image: image-url("foods.jpg");
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+//   opacity: .5;
+//   z-index: 1;
+// }
+
+// .contents {
+//   height: 200px;
+//   z-index: 2;
+//   position: relative;
+// }
+

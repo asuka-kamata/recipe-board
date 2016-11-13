@@ -8,6 +8,8 @@ module SessionsHelper
         !!current_user
     end
     
+    #リクエストがGETの場合、session[:forwarding_url]に
+    #リクエストのURLを代入
     def store_location
         session[:forwarding_url] = request.url if request.get?
     end

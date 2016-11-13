@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026233514) do
+ActiveRecord::Schema.define(version: 20161106013455) do
+
+  create_table "foods", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "foods", ["user_id"], name: "index_foods_on_user_id"
+
+  create_table "stocks", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "category"
+    t.string   "foods_name"
+    t.integer  "number"
+    t.datetime "limit"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "stocks", ["user_id"], name: "index_stocks_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

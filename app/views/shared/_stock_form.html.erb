@@ -1,0 +1,11 @@
+<div>
+    <%= form_for(@stock) do |f| %>
+    
+    <%= f.text_field :category, placeholder: "カテゴリ" %>
+    <%= f.text_field :foods_name, placeholder: "食材名" %>
+    <%= f.text_field :number, placeholder: "個数" %>
+    <%= f.text_field :limit, placeholder: "賞味期限" %>
+    <%= f.submit "登録", class: "btn btn-primary" %>
+
+    <% end %>
+</div>

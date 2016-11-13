@@ -1,4 +1,36 @@
 <h1>
     <%= gravatar_for @user %>
     <%= @user.name %>
+    <br>
+    <%= @user.email %>
 </h1>
+
+<div class="col-xs-6">
+    <table>
+        <tr>
+            <th>名前</th>
+            <th>個数</th>
+            <th>期限</th>
+        </tr>
+    <% @stocks.each do |st| %>
+        <tr>
+          <td class="col-xs-2"><%= st.foods_name %></td>
+          <td class="col-xs-1"><%= st.number %></td>
+          <% if st.limit.present? %>
+              <td class="col-xs-2">
+                  <%= st.limit.strftime('%Y年%m月%d日') %>
+              </td>
+          <% end %>
+        </tr>
+    <% end %>
+    </table>
+</div>
+    <div class="row">
+        <aside class="col-xs-4 col-xs-offset-8">
+            <section class="stock_form">
+                <%= render 'shared/stock_form' %>
+            </section>
+        </aside>
+    </div>
+    
+  
