@@ -1,21 +1,7 @@
-<% if logged_in? %>
-    
-    <div class="row">
-        <aside class="col-xs-4 col-xs-offset-8">
-            <section class="stock_form">
-                <%= render 'shared/stock_form' %>
-            </section>
-        </aside>
+<div class="center jumbotron">
+    <div class="bg-fake"></div>
+    <div class="contents">
+            <h1>食材管理レシピサイト</h1>
+            <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
     </div>
-    
-<% else %>
-    
-    <div class="center jumbotron">
-        <div class="bg-fake"></div>
-        <div class="contents">
-                <h1>食材管理レシピサイト</h1>
-                <%= link_to "新規登録", signup_path, class: "btn btn-lg btn-primary" %>
-        </div>
-    </div>    
-    
-<% end %>    
+</div>

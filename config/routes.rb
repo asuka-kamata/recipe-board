@@ -5,7 +5,14 @@ Rails.application.routes.draw do
   post   'login',  to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   
-  resources :users
+  resources :users do
+    root to: 'users#index'
+    member do
+      get :stock_recipe
+      get :get_category
+    end
+  end
+  
   resources :foods
   resources :stocks, only: [:create]
 end

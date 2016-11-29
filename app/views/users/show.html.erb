@@ -5,24 +5,27 @@
     <%= @user.email %>
 </h1>
 
+
+
+<div class="btn-group-vertical">
+    <button class="btn"><%= link_to "野菜", get_category_user_path("野菜"), remote:true %></button>
+    <button class="btn"><%= link_to "果物", get_category_user_path("果物"), remote:true %></button>
+    <button class="btn"><%= link_to "お肉", get_category_user_path("お肉"), remote:true %></button>
+    <button class="btn"><%= link_to "お魚", get_category_user_path("お魚"), remote:true %></button>
+    <button class="btn"><%= link_to "乳製品", get_category_user_path("乳製品"), remote:true %></button>
+    <button class="btn"><%= link_to "卵", get_category_user_path("卵"), remote:true %></button>
+    <button class="btn"><%= link_to "その他", get_category_user_path("その他"), remote:true %></button>
+</div>
+
 <div class="col-xs-6">
-    <table>
+
+    <table border="1">
         <tr>
-            <th>名前</th>
+            <th>食材名</th>
             <th>個数</th>
             <th>期限</th>
         </tr>
-    <% @stocks.each do |st| %>
-        <tr>
-          <td class="col-xs-2"><%= st.foods_name %></td>
-          <td class="col-xs-1"><%= st.number %></td>
-          <% if st.limit.present? %>
-              <td class="col-xs-2">
-                  <%= st.limit.strftime('%Y年%m月%d日') %>
-              </td>
-          <% end %>
-        </tr>
-    <% end %>
+        <tbody id="stacks"></tbody>
     </table>
 </div>
     <div class="row">
@@ -32,5 +35,7 @@
             </section>
         </aside>
     </div>
+    
+<%= link_to "レシピ検索", stock_recipe_user_path, class: "btn btn-lg btn-primary" %>
     
   

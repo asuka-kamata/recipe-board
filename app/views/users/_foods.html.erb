@@ -1,0 +1,9 @@
+<% @foods.each do |fd| %>
+        <tr>
+        <td><%= fd.foods_name %></td>
+        <td><%= fd.number %></td>
+        <% if fd.limit.present? %>
+            <td><%= fd.limit.strftime('%Y年%m月%d日') %></td>
+        <% end %>
+        </tr>
+<% end %>
